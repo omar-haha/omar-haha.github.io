@@ -1,0 +1,196 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0d0d0d;
+  --surface:   #161616;
+  --border:    #2a2a2a;
+  --text:      #e8e8e8;
+  --muted:     #888;
+  --accent:    #7c6fe0;
+  --accent-h:  #9d93ee;
+  --radius:    6px;
+  --font:      'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mono:      'Cascadia Code', 'Fira Mono', 'Consolas', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+
+.hero {
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+
+.hero .title {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  margin-bottom: 1.25rem;
+}
+
+.hero .bio {
+  color: #b8b8b8;
+  max-width: 56ch;
+  font-size: 1rem;
+}
+
+/* ── Sections ─────────────────────────────────────── */
+
+.section {
+  margin-bottom: 3.5rem;
+}
+
+.section h2 {
+  font-size: 0.75rem;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Cards ────────────────────────────────────────── */
+
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: #3d3d3d;
+}
+
+.card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.card-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-family: var(--mono);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.card p {
+  font-size: 0.92rem;
+  color: #b0b0b0;
+  margin-bottom: 1rem;
+}
+
+.btn-link {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--mono);
+  transition: color 0.15s ease;
+}
+
+.btn-link:hover {
+  color: var(--accent-h);
+}
+
+/* ── CV button ────────────────────────────────────── */
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-family: var(--mono);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ── Contact ──────────────────────────────────────── */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.contact-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.contact-links a:hover {
+  color: var(--accent-h);
+  border-color: var(--accent-h);
+}
+
+/* ── Responsive ───────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2.5rem 1.25rem 4rem;
+  }
+
+  .hero {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}
