@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="top-bar"></div>
+
   <div class="container">
 
     <!-- Hero -->
@@ -17,6 +19,11 @@
         I build full-stack applications and systems with a focus on clean architecture and practical results.
         Currently finishing my B.Eng. in Software Engineering, expected Fall 2026.
       </p>
+      <div class="hero-nav">
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </div>
     </header>
 
     <!-- Projects -->
@@ -27,12 +34,18 @@
         <div class="card">
           <div class="card-header">
             <h3>Finance Dashboard</h3>
-            <span class="tag">Android &middot; Full-Stack</span>
+          </div>
+          <div class="chips">
+            <span class="chip">React Native</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Expo EAS</span>
+            <span class="chip">Solo</span>
           </div>
           <p>
-            Solo-built mobile finance tracker using React Native (Expo), Node.js/Express REST API,
-            and PostgreSQL hosted on Neon. Features income/expense tracking with categorisation,
-            monthly bar charts, and OTA updates via Expo EAS. Backend deployed on Render.
+            Solo-built Android finance tracker with income/expense categorisation, monthly bar charts,
+            and a net balance summary. REST API backed by Node.js/Express and PostgreSQL on Neon,
+            deployed on Render. OTA updates shipped via Expo EAS without reinstallation.
           </p>
           <a class="btn-link" href="https://github.com/omar-haha/finance-dashboard" target="_blank" rel="noopener">
             View on GitHub &rarr;
@@ -41,15 +54,22 @@
 
         <div class="card">
           <div class="card-header">
-            <h3>Tides of the Horde</h3>
-            <span class="tag">Unity &middot; C# &middot; Game Dev</span>
+            <h3>MeMantra <span class="badge">Capstone</span></h3>
+          </div>
+          <div class="chips">
+            <span class="chip">React Native</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Docker</span>
+            <span class="chip">SonarQube</span>
+            <span class="chip">Agile</span>
           </div>
           <p>
-            Co-developed a 3D arena survival game in Unity (C#) following MVC architecture.
-            Contributed enemy AI with dynamic attack patterns, a JSON-configurable wave system,
-            a modular spell-casting system, UI/UX components, and 3D assets in Blender.
+            Co-developed a mental wellness mobile app in an 11-person Agile team across a full academic
+            release cycle. Architected the core tab navigator and integrated frontend with backend RESTful APIs.
+            Led a database migration from Oracle to PostgreSQL and contributed CI/CD pipelines with Docker and SonarQube.
           </p>
-          <a class="btn-link" href="https://github.com/RyanDeBarros/Tides-of-the-Horde" target="_blank" rel="noopener">
+          <a class="btn-link" href="https://github.com/MeMantraa/MeMantra" target="_blank" rel="noopener">
             View on GitHub &rarr;
           </a>
         </div>
@@ -74,5 +94,9 @@
     </section>
 
   </div>
+
+  <footer class="footer">
+    <span>Harun Omar &mdash; 2026</span>
+  </footer>
 </body>
 </html>
