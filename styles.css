@@ -156,6 +156,91 @@ body {
   vertical-align: middle;
 }
 
+/* ── Carousel ─────────────────────────────────────── */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 1px);
+  background: #080808;
+  height: 300px;
+  margin-bottom: 1.25rem;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.28s ease;
+  will-change: transform;
+}
+
+.carousel-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+  z-index: 2;
+}
+
+.carousel-prev { left: 8px; }
+.carousel-next { right: 8px; }
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: rgba(124, 111, 224, 0.65);
+  color: #fff;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+}
+
+.dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, width 0.2s ease;
+}
+
+.dot.active {
+  width: 18px;
+  background: var(--accent);
+}
+
 /* ── Tech chips ───────────────────────────────────── */
 
 .chips {
