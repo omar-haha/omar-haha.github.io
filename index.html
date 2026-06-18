@@ -30,6 +30,20 @@
           <div class="card-header">
             <h3>Finance Dashboard</h3>
           </div>
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="images/finance-dashboard/1.jpg" alt="Finance Dashboard — net balance screen" loading="lazy">
+              <img src="images/finance-dashboard/2.jpg" alt="Finance Dashboard — pie chart breakdown" loading="lazy">
+              <img src="images/finance-dashboard/3.jpg" alt="Finance Dashboard — transactions list" loading="lazy">
+            </div>
+            <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots">
+              <button class="dot active" aria-label="Slide 1"></button>
+              <button class="dot" aria-label="Slide 2"></button>
+              <button class="dot" aria-label="Slide 3"></button>
+            </div>
+          </div>
           <div class="chips">
             <span class="chip">React Native</span>
             <span class="chip">Node.js</span>
@@ -50,6 +64,20 @@
         <div class="card">
           <div class="card-header">
             <h3>MeMantra <span class="badge">Capstone</span></h3>
+          </div>
+          <div class="carousel">
+            <div class="carousel-track">
+              <img src="images/memantra/1.jpg" alt="MeMantra screenshot 1" loading="lazy">
+              <img src="images/memantra/2.jpg" alt="MeMantra screenshot 2" loading="lazy">
+              <img src="images/memantra/3.jpg" alt="MeMantra screenshot 3" loading="lazy">
+            </div>
+            <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots">
+              <button class="dot active" aria-label="Slide 1"></button>
+              <button class="dot" aria-label="Slide 2"></button>
+              <button class="dot" aria-label="Slide 3"></button>
+            </div>
           </div>
           <div class="chips">
             <span class="chip">React Native</span>
@@ -89,5 +117,35 @@
     </section>
 
   </div>
+
+  <script>
+    document.querySelectorAll('.carousel').forEach(function(el) {
+      var track = el.querySelector('.carousel-track');
+      var slides = track.querySelectorAll('img');
+      var dots = el.querySelectorAll('.dot');
+      var n = slides.length;
+      var i = 0;
+
+      // Hide carousel entirely if first image fails (no screenshots added yet)
+      slides[0].addEventListener('error', function() { el.style.display = 'none'; });
+
+      function go(idx) {
+        i = ((idx % n) + n) % n;
+        track.style.transform = 'translateX(-' + (i * 100) + '%)';
+        dots.forEach(function(d, j) { d.classList.toggle('active', j === i); });
+      }
+
+      el.querySelector('.carousel-prev').addEventListener('click', function() { go(i - 1); });
+      el.querySelector('.carousel-next').addEventListener('click', function() { go(i + 1); });
+      dots.forEach(function(d, j) { d.addEventListener('click', function() { go(j); }); });
+
+      var sx = 0;
+      track.addEventListener('touchstart', function(e) { sx = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', function(e) {
+        var dx = e.changedTouches[0].clientX - sx;
+        if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+      });
+    });
+  </script>
 </body>
 </html>
