@@ -282,6 +282,31 @@ body {
   background: var(--accent);
 }
 
+/* ── Wide media card (full-width screenshots) ────────── */
+
+.card--wide {
+  flex-direction: column;
+}
+
+.card--wide .card-content {
+  flex: none;
+  width: 100%;
+}
+
+.card-media--wide {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.carousel--wide {
+  height: auto;
+  aspect-ratio: 1768 / 1055;
+}
+
+.carousel--wide .carousel-track img {
+  object-position: center;
+}
+
 /* ── Video card ───────────────────────────────────── */
 
 .card--video {
@@ -374,5 +399,9 @@ body {
 
   .carousel {
     height: 260px;
+  }
+
+  .carousel--wide {
+    height: auto;
   }
 }

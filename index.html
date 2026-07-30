@@ -17,6 +17,7 @@
       <p class="title">Software Engineering Student &mdash; Concordia University</p>
       <p class="bio">
         I build full-stack applications and systems with a focus on clean architecture and practical results.
+        My current focus is full-stack web development, with additional experience across mobile apps and game systems.
         Currently finishing my B.Eng. in Software Engineering, expected Fall 2026.
       </p>
     </header>
@@ -25,6 +26,94 @@
     <section class="section" id="projects">
       <h2>Projects</h2>
       <div class="cards">
+
+        <div class="card">
+          <div class="card-content">
+            <div class="card-header">
+              <h3>MeMantra <span class="badge">Capstone</span></h3>
+            </div>
+            <div class="chips">
+              <span class="chip">React Native</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Jest</span>
+              <span class="chip">Docker</span>
+              <span class="chip">CodeQL</span>
+              <span class="chip">Agile</span>
+            </div>
+            <p>
+              Co-developed a mental wellness mobile app in an 11-person Agile team across a full academic
+              release cycle. Architected the core tab navigator, integrated frontend with backend RESTful APIs,
+              and led a database migration from Oracle to PostgreSQL. Owned Jest/Supertest unit and integration
+              testing across the mobile app and API, enforced by a CI pipeline running lint, typecheck, SonarQube,
+              and CodeQL on every push.
+            </p>
+            <a class="btn-link" href="https://github.com/MeMantraa/MeMantra" target="_blank" rel="noopener">
+              View on GitHub &rarr;
+            </a>
+          </div>
+          <div class="card-media">
+            <div class="carousel">
+              <div class="carousel-track">
+                <img src="images/memantra/1.webp" alt="MeMantra screenshot 1" loading="lazy">
+                <img src="images/memantra/2.webp" alt="MeMantra screenshot 2" loading="lazy">
+                <img src="images/memantra/3.webp" alt="MeMantra screenshot 3" loading="lazy">
+              </div>
+              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots">
+                <button class="dot active" aria-label="Slide 1"></button>
+                <button class="dot" aria-label="Slide 2"></button>
+                <button class="dot" aria-label="Slide 3"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--wide">
+          <div class="card-content">
+            <div class="card-header">
+              <h3>RCCA</h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Next.js 15</span>
+              <span class="chip">React 19</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Supabase</span>
+              <span class="chip">Docker</span>
+            </div>
+            <p>
+              Solo-built, self-hosted e-commerce storefront with bilingual (EN/FR) localisation, a custom
+              cart and checkout flow supporting Interac e-Transfer and crypto, and SEO-optimised structured
+              data. Supabase (PostgreSQL) drives orders, inventory, and reviews behind a password-protected
+              admin dashboard, with Upstash Redis rate limiting and Resend transactional email on a fully
+              authenticated domain. Containerised with Docker and deployed to a Hetzner VPS behind Caddy,
+              with Cloudflare DNS/CDN and GitHub Actions CI/CD on every push to main.
+            </p>
+            <a class="btn-link" href="https://github.com/omar-haha/rcca" target="_blank" rel="noopener">
+              View on GitHub &rarr;
+            </a>
+          </div>
+          <div class="card-media card-media--wide">
+            <div class="carousel carousel--wide">
+              <div class="carousel-track">
+                <img src="images/rcca/image.png" alt="RCCA — storefront product grid with category filters" loading="lazy">
+                <img src="images/rcca/image4.png" alt="RCCA — checkout flow with Interac e-Transfer and crypto payment options" loading="lazy">
+                <img src="images/rcca/image2.png" alt="RCCA — FAQ page" loading="lazy">
+                <img src="images/rcca/image3.png" alt="RCCA — contact page" loading="lazy">
+              </div>
+              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots">
+                <button class="dot active" aria-label="Slide 1"></button>
+                <button class="dot" aria-label="Slide 2"></button>
+                <button class="dot" aria-label="Slide 3"></button>
+                <button class="dot" aria-label="Slide 4"></button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="card">
           <div class="card-content">
@@ -53,46 +142,6 @@
                 <img src="images/finance-dashboard/1.jpg" alt="Finance Dashboard — net balance screen" loading="lazy">
                 <img src="images/finance-dashboard/2.jpg" alt="Finance Dashboard — pie chart breakdown" loading="lazy">
                 <img src="images/finance-dashboard/3.jpg" alt="Finance Dashboard — transactions list" loading="lazy">
-              </div>
-              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-              <button class="carousel-next" aria-label="Next">&#8250;</button>
-              <div class="carousel-dots">
-                <button class="dot active" aria-label="Slide 1"></button>
-                <button class="dot" aria-label="Slide 2"></button>
-                <button class="dot" aria-label="Slide 3"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <div class="card-header">
-              <h3>MeMantra <span class="badge">Capstone</span></h3>
-            </div>
-            <div class="chips">
-              <span class="chip">React Native</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">PostgreSQL</span>
-              <span class="chip">Docker</span>
-              <span class="chip">SonarQube</span>
-              <span class="chip">Agile</span>
-            </div>
-            <p>
-              Co-developed a mental wellness mobile app in an 11-person Agile team across a full academic
-              release cycle. Architected the core tab navigator and integrated frontend with backend RESTful APIs.
-              Led a database migration from Oracle to PostgreSQL and contributed CI/CD pipelines with Docker and SonarQube.
-            </p>
-            <a class="btn-link" href="https://github.com/MeMantraa/MeMantra" target="_blank" rel="noopener">
-              View on GitHub &rarr;
-            </a>
-          </div>
-          <div class="card-media">
-            <div class="carousel">
-              <div class="carousel-track">
-                <img src="images/memantra/1.webp" alt="MeMantra screenshot 1" loading="lazy">
-                <img src="images/memantra/2.webp" alt="MeMantra screenshot 2" loading="lazy">
-                <img src="images/memantra/3.webp" alt="MeMantra screenshot 3" loading="lazy">
               </div>
               <button class="carousel-prev" aria-label="Previous">&#8249;</button>
               <button class="carousel-next" aria-label="Next">&#8250;</button>
