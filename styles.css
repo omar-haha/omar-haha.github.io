@@ -198,12 +198,6 @@ body {
 
 .btn-link:hover { color: var(--accent-h); }
 
-.link-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-
 /* ── Carousel ─────────────────────────────────────── */
 
 .carousel {
