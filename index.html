@@ -73,7 +73,7 @@
         <div class="card card--wide">
           <div class="card-content">
             <div class="card-header">
-              <h3>RCCA</h3>
+              <h3>Vessel <span class="badge">Demo</span></h3>
             </div>
             <div class="chips">
               <span class="chip">Next.js 15</span>
@@ -84,24 +84,30 @@
               <span class="chip">Docker</span>
             </div>
             <p>
-              Solo-built, self-hosted e-commerce storefront with bilingual (EN/FR) localisation, a custom
-              cart and checkout flow supporting Interac e-Transfer and crypto, and SEO-optimised structured
-              data. Supabase (PostgreSQL) drives orders, inventory, and reviews behind a password-protected
-              admin dashboard, with Upstash Redis rate limiting and Resend transactional email on a fully
-              authenticated domain. Containerised with Docker and deployed to a Hetzner VPS behind Caddy,
-              with Cloudflare DNS/CDN and GitHub Actions CI/CD on every push to main.
+              Full-stack e-commerce storefront adapted from a real production project into a public portfolio
+              demo, built to show production patterns rather than a toy CRUD app: server-side price
+              re-derivation and live stock validation at checkout, Supabase writes that degrade gracefully
+              instead of taking checkout down, and a type-checked bilingual (EN/FR) UI. Reviews only earn a
+              &ldquo;Verified Buyer&rdquo; badge when matched to a real order, and analytics stay off until
+              explicit consent (Law 25/PIPEDA). Deployed on Vercel, with a self-hosted Docker/Caddy/GitHub
+              Actions pipeline demonstrated in the repo.
             </p>
-            <a class="btn-link" href="https://github.com/omar-haha/rcca" target="_blank" rel="noopener">
-              View on GitHub &rarr;
-            </a>
+            <div class="link-row">
+              <a class="btn-link" href="https://vessel-demoversion.vercel.app/" target="_blank" rel="noopener">
+                View Live Demo &rarr;
+              </a>
+              <a class="btn-link" href="https://github.com/omar-haha/rcca" target="_blank" rel="noopener">
+                View on GitHub &rarr;
+              </a>
+            </div>
           </div>
           <div class="card-media card-media--wide">
             <div class="carousel carousel--wide">
               <div class="carousel-track">
-                <img src="images/rcca/image.png" alt="RCCA — storefront product grid with category filters" loading="lazy">
-                <img src="images/rcca/image4.png" alt="RCCA — checkout flow with Interac e-Transfer and crypto payment options" loading="lazy">
-                <img src="images/rcca/image2.png" alt="RCCA — FAQ page" loading="lazy">
-                <img src="images/rcca/image3.png" alt="RCCA — contact page" loading="lazy">
+                <img src="images/rcca/image.png" alt="Vessel — product catalog with category filters" loading="lazy">
+                <img src="images/rcca/image2.png" alt="Vessel — homepage hero" loading="lazy">
+                <img src="images/rcca/image3.png" alt="Vessel — testing and quality assurance page" loading="lazy">
+                <img src="images/rcca/image4.png" alt="Vessel — customer reviews page" loading="lazy">
               </div>
               <button class="carousel-prev" aria-label="Previous">&#8249;</button>
               <button class="carousel-next" aria-label="Next">&#8250;</button>
