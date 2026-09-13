@@ -1,0 +1,170 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{multirow}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1\vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1}, \textit{\small#3} & \textit{\small #4} \quad #2 \\
+    \end{tabular*}\vspace{1pt}
+}
+
+\newcommand{\eduSubheading}[3]{%
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectSubheading}[2]{%
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{1pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt, parsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+    {\Large \textbf{Harun Slahaldin Omar}}\\[1pt]
+    \textbf{Software Engineering Student}\\[3pt]
+    Laval, QC \,|\,
+    \href{mailto:harunager@outlook.com}{harunager@outlook.com} \,|\,
+    (438) 508-5226 \,|\,
+    \href{https://www.linkedin.com/in/harunslahaldinomar/}{LinkedIn} \,|\,
+    \href{https://github.com/omar-haha}{GitHub} \,|\,
+    \href{https://omar-haha.github.io/}{Portfolio}
+\end{center}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \eduSubheading
+      {Master of Engineering, Software Engineering --- Concordia University}
+      {Jan. 2027 -- May 2028}
+      {Co-op Option \quad Expected Graduation: May 2028}
+    \eduSubheading
+      {Bachelor of Engineering, Software Engineering --- Concordia University}
+      {Sept. 2022 -- Present}
+      {GPA: 3.3 \quad Expected Graduation: Fall 2026}
+    \eduSubheading
+      {DEC in Pure and Applied Science --- Vanier College}
+      {Sept. 2020 -- May 2022}
+      {}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \projectSubheading{MeMantra --- Mental Wellness Mobile Application (Capstone)}{\href{https://github.com/MeMantraa/MeMantra}{github.com/MeMantraa/MeMantra}}
+      \resumeItemListStart
+        \resumeItem{Co-developed a full-stack \textbf{React Native}/\textbf{Node.js} mental wellness app in an \textbf{11-person Agile team} across a full academic release cycle, contributing from UI components to database architecture.}
+        \resumeItem{Architected the core bottom tab navigator and integrated frontend with backend RESTful APIs; wrote unit and integration tests with \textbf{Jest} and \textbf{Supertest} to validate API endpoints.}
+        \resumeItem{Resolved critical system issues including a database migration (Oracle to PostgreSQL) and dead code elimination in JWT utilities; contributed to \textbf{CI/CD} pipelines with \textbf{Docker}, \textbf{SonarQube}, and \textbf{CodeQL} static analysis.}
+      \resumeItemListEnd
+
+    \projectSubheading{Vessel --- E-Commerce Portfolio Demo}{\href{https://github.com/omar-haha/rcca}{github.com/omar-haha/rcca}}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack e-commerce demo in \textbf{Next.js 15}/\textbf{React 19}/\textbf{TypeScript}, adapted from a production project, with server-side price re-derivation and live stock validation at checkout backed by \textbf{Supabase} (PostgreSQL).}
+        \resumeItem{Implemented a type-checked bilingual (EN/FR) UI, an order-matched ``Verified Buyer'' review system, and consent-gated \textbf{Google Analytics} compliant with Law 25/PIPEDA.}
+        \resumeItem{Documented a self-hosted deployment pipeline (\textbf{Docker}, \textbf{Caddy}, \textbf{GitHub Actions}) alongside the live \textbf{Vercel} deployment, demonstrating both hosting paths used in production.}
+      \resumeItemListEnd
+
+    \projectSubheading{Sillage --- Event-Driven Multi-Asset Portfolio Engine}{In development}
+      \resumeItemListStart
+        \resumeItem{Built an event-driven systematic portfolio platform in \textbf{Python}/\textbf{FastAPI} with a \textbf{React}/\textbf{TypeScript} dashboard, using one shared engine for backtesting and live execution across ETFs and crypto.}
+        \resumeItem{Prevented look-ahead bias structurally through explicit \texttt{as\_of} data boundaries and next-open execution; implemented exact decimal accounting, pre-submission order journaling, idempotency IDs, position reconciliation, stale-data checks, and risk limits.}
+        \resumeItem{Developed held-out, sensitivity, timing-luck, and cost-stress validation; achieved a \textbf{0.91 Sharpe} and \textbf{19.9\% max drawdown} from 2005--2026 by blending momentum with 60/40 (IBKR paper verification pending).}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Purolator Inc.}{Laval, QC}
+      {Delivery Driver}{April 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Execute time-critical delivery operations handling \textbf{200+ daily packages}, consistently maintaining a \textbf{99\%+ on-time rate} across dynamic urban and suburban routes.}
+        \resumeItem{Independently resolve logistical issues (routing, access, labelling) on the fly and optimise daily load organisation to improve route efficiency.}
+        \resumeItem{Manage high-value shipments with meticulous tracking and professional client-facing service in a fast-paced, high-accountability environment.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Vanier College}{Montréal, QC}
+      {Tutor --- Calculus I, Calculus II \& Web Development}{Aug. 2021 -- May 2022}
+      \resumeItemListStart
+        \resumeItem{Tutored \textbf{25+ students} through weekly one-on-one and group sessions, helping raise average exam scores by approximately \textbf{13\%} via personalised learning plans.}
+        \resumeItem{Developed structured review materials and targeted practice problems for Calculus and intro programming courses.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Programming Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, topsep=3pt, itemsep=0pt]
+  \small{\item{
+   \textbf{Languages:} Python, Java, JavaScript / TypeScript, C++, C, C\#, SQL \\
+   \textbf{Frameworks \& Libraries:} React, React Native, Next.js, FastAPI, Node.js, Pandas, Plotly \\
+   \textbf{Tools \& Platforms:} Git, Docker, Linux, PostgreSQL, SQLite, DuckDB, pytest, CI/CD, Supabase \\
+   \textbf{Spoken Languages:} English, French
+  }}
+\end{itemize}
+
+%-----------ADDITIONAL-----------------
+\section{Additional}
+\begin{itemize}[leftmargin=0.15in, label={}, topsep=3pt, itemsep=0pt]
+  \small{\item{
+    \textbf{Interests:} Piano, weightlifting, motorcycles, travel (10+ countries)
+  }}
+\end{itemize}
+
+\end{document}
