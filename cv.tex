@@ -104,23 +104,23 @@
 
     \projectSubheading{MeMantra --- Mental Wellness Mobile Application (Capstone)}{\href{https://github.com/MeMantraa/MeMantra}{github.com/MeMantraa/MeMantra}}
       \resumeItemListStart
-        \resumeItem{Co-developed a full-stack \textbf{React Native}/\textbf{Node.js} mental wellness app in an \textbf{11-person Agile team} across a full academic release cycle, contributing from UI components to database architecture.}
-        \resumeItem{Architected the core bottom tab navigator and integrated frontend with backend RESTful APIs; wrote unit and integration tests with \textbf{Jest} and \textbf{Supertest} to validate API endpoints.}
-        \resumeItem{Resolved critical system issues including a database migration (Oracle to PostgreSQL) and dead code elimination in JWT utilities; contributed to \textbf{CI/CD} pipelines with \textbf{Docker}, \textbf{SonarQube}, and \textbf{CodeQL} static analysis.}
+        \resumeItem{Co-developed a \textbf{React Native}/\textbf{Node.js} mental wellness app with an \textbf{11-person Agile team} across a full academic release cycle.}
+        \resumeItem{Built the app's main tab navigation, connected mobile screens to backend APIs, and wrote automated app and API tests with \textbf{Jest} and \textbf{Supertest}.}
+        \resumeItem{Led the database migration from Oracle to \textbf{PostgreSQL} and contributed to the automated test, code-quality, and security checks used before deployment.}
       \resumeItemListEnd
 
     \projectSubheading{Vessel --- E-Commerce Portfolio Demo}{\href{https://github.com/omar-haha/rcca}{github.com/omar-haha/rcca}}
       \resumeItemListStart
-        \resumeItem{Built a full-stack e-commerce demo in \textbf{Next.js 15}/\textbf{React 19}/\textbf{TypeScript}, adapted from a production project, with server-side price re-derivation and live stock validation at checkout backed by \textbf{Supabase} (PostgreSQL).}
-        \resumeItem{Implemented a type-checked bilingual (EN/FR) UI, an order-matched ``Verified Buyer'' review system, and consent-gated \textbf{Google Analytics} compliant with Law 25/PIPEDA.}
-        \resumeItem{Documented a self-hosted deployment pipeline (\textbf{Docker}, \textbf{Caddy}, \textbf{GitHub Actions}) alongside the live \textbf{Vercel} deployment, demonstrating both hosting paths used in production.}
+        \resumeItem{Built a bilingual e-commerce demo in \textbf{Next.js}/\textbf{TypeScript}, adapted from a real storefront codebase and deployed on \textbf{Vercel}.}
+        \resumeItem{Designed checkout to recalculate prices and validate current stock on the server, preventing outdated or modified browser data from creating incorrect orders.}
+        \resumeItem{Linked ``Verified Buyer'' reviews to completed orders, kept optional analytics off until consent, and documented a separate \textbf{Docker}-based deployment path.}
       \resumeItemListEnd
 
     \projectSubheading{Sillage --- Event-Driven Multi-Asset Portfolio Engine}{\href{https://github.com/omar-haha/sillage}{github.com/omar-haha/sillage}}
       \resumeItemListStart
-        \resumeItem{Built an event-driven systematic portfolio platform in \textbf{Python}/\textbf{FastAPI} with a \textbf{React}/\textbf{TypeScript} dashboard, using one shared engine for backtesting and live execution across ETFs and crypto.}
-        \resumeItem{Prevented look-ahead bias structurally through explicit \texttt{as\_of} data boundaries and next-open execution; implemented exact decimal accounting, pre-submission order journaling, idempotency IDs, position reconciliation, stale-data checks, and risk limits.}
-        \resumeItem{Developed held-out, sensitivity, timing-luck, and cost-stress validation; achieved a \textbf{0.91 Sharpe} and \textbf{19.9\% max drawdown} from 2005--2026 by blending momentum with 60/40 (IBKR paper verification pending).}
+        \resumeItem{Built a portfolio platform in \textbf{Python}/\textbf{FastAPI} with a \textbf{React}/\textbf{TypeScript} dashboard, using the same decision engine for backtests and live trading across ETFs and crypto.}
+        \resumeItem{Prevented look-ahead bias by limiting every data read to a known point in time and delaying close-time decisions until the next market open.}
+        \resumeItem{Added durable order records and checks for stale data, position differences, and risk limits; a blended strategy reached a \textbf{0.91 Sharpe} and \textbf{19.9\% max drawdown} from 2005--2026 (IBKR paper verification pending).}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd

@@ -48,11 +48,10 @@
               <span class="chip">Agile</span>
             </div>
             <p>
-              Co-developed a mental wellness mobile app in an 11-person Agile team across a full academic
-              release cycle. Architected the core tab navigator, integrated frontend with backend RESTful APIs,
-              and led a database migration from Oracle to PostgreSQL. Owned Jest/Supertest unit and integration
-              testing across the mobile app and API, enforced by a CI pipeline running lint, typecheck, SonarQube,
-              and CodeQL on every push.
+              Co-developed a mental wellness mobile app with an 11-person team across a full academic release
+              cycle. Built the app's main navigation, connected mobile screens to the backend, and led the move
+              from Oracle to PostgreSQL. Also wrote automated tests and helped maintain the checks used to catch
+              problems before deployment.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="memantra">Case study</button>
@@ -91,13 +90,10 @@
               <span class="chip">Docker</span>
             </div>
             <p>
-              Full-stack e-commerce storefront adapted from a real production project into a public portfolio
-              demo, built to show production patterns rather than a toy CRUD app: server-side price
-              re-derivation and live stock validation at checkout, Supabase writes that degrade gracefully
-              instead of taking checkout down, and a type-checked bilingual (EN/FR) UI. Reviews only earn a
-              &ldquo;Verified Buyer&rdquo; badge when matched to a real order, and analytics stay off until
-              explicit consent (Law 25/PIPEDA). Deployed on Vercel, with a self-hosted Docker/Caddy/GitHub
-              Actions pipeline demonstrated in the repo.
+              Full-stack e-commerce storefront adapted into a public portfolio demo. Checkout recalculates
+              prices and checks current stock on the server instead of trusting the browser, and optional data
+              failures do not prevent an order from completing. The app also includes a bilingual interface,
+              order-backed &ldquo;Verified Buyer&rdquo; reviews, consent-based analytics, and a documented deployment setup.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="vessel">Case study</button>
@@ -139,11 +135,10 @@
               <span class="chip">Docker</span>
             </div>
             <p>
-              Event-driven multi-asset portfolio engine for honest backtesting, paper trading, and live
-              execution. A shared event loop applies momentum, trend filters, volatility targeting,
-              transaction costs, and risk controls across ETFs and crypto while structurally preventing
-              look-ahead bias. The core platform and research suite are complete; live IBKR Gateway
-              verification and paper trading remain in progress.
+              Portfolio engine for backtesting and live trading across ETFs and crypto. Both modes use the same
+              decision process, with strict time boundaries that prevent a strategy from seeing future data.
+              Orders are recorded before submission, and trading stops when data is stale, positions disagree,
+              or a risk limit is exceeded. The core platform is complete; IBKR paper testing remains in progress.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="sillage">Case study</button>
@@ -190,9 +185,9 @@
               <span class="chip">Solo</span>
             </div>
             <p>
-              Solo-built Android finance tracker with income/expense categorisation, monthly bar charts,
-              and a net balance summary. REST API backed by Node.js/Express and PostgreSQL on Neon,
-              deployed on Render. OTA updates shipped via Expo EAS without reinstallation.
+              Built this Android finance tracker independently, from the mobile interface through the hosted API
+              and database. It tracks income and expenses, shows monthly trends and net balance, and supports
+              over-the-air updates without requiring users to reinstall the app.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="finance">Case study</button>
@@ -230,11 +225,10 @@
               <span class="chip">MVC</span>
             </div>
             <p>
-              Co-developed a 3D arena survival game in Unity (C#) following MVC architecture, working across
-              AI behaviour, physics-based combat, and a data-driven upgrade tree. Implemented a
-              JSON-configurable enemy wave system, boss AI with dynamic attack patterns, and a modular
-              spell-casting system. Built UI/UX components, created 3D assets in Blender, and wrote
-              custom shaders in HLSL/ShaderLab.
+              Co-developed a 3D arena survival game in Unity. Built configurable enemy waves, boss behaviours,
+              and a reusable spell system while also contributing to combat, the upgrade interface, 3D assets,
+              and visual effects. Kept the gameplay systems separate enough to tune and extend without rewriting
+              the rest of the game.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="tides">Case study</button>
@@ -313,10 +307,10 @@
       <h2 id="case-title">MeMantra</h2>
       <p class="case-lede">A mental-wellness mobile product developed across a full academic release cycle.</p>
       <div class="case-grid">
-        <section><h3>Challenge</h3><p>Coordinate a large student team while keeping navigation, API integration, database work, and testing dependable as the product evolved.</p></section>
-        <section><h3>My role</h3><p>Architected the core tab navigator, connected the mobile UI to REST APIs, led the Oracle-to-PostgreSQL migration, and owned API and app testing.</p></section>
-        <section><h3>Engineering</h3><p>Jest and Supertest coverage ran alongside linting, type checks, SonarQube, and CodeQL on every push.</p></section>
-        <section><h3>Takeaway</h3><p>Reliable delivery in a large team depends as much on shared interfaces and automated checks as individual features.</p></section>
+        <section><h3>Challenge</h3><p>Keep a mobile app dependable while 11 students worked on navigation, APIs, data, and features at the same time.</p></section>
+        <section><h3>My role</h3><p>Built the main tab navigation, connected screens to backend endpoints, led the Oracle-to-PostgreSQL migration, and wrote app and API tests.</p></section>
+        <section><h3>Release safety</h3><p>Automated tests, linting, type checks, and security analysis ran on every push so issues were caught before deployment.</p></section>
+        <section><h3>Takeaway</h3><p>Clear interfaces and automatic checks became essential once many people were changing the same product.</p></section>
       </div>
     </article>
   </template>
@@ -325,12 +319,12 @@
     <article class="case-content">
       <p class="case-label">Full-stack portfolio demo</p>
       <h2 id="case-title">Vessel</h2>
-      <p class="case-lede">An e-commerce storefront designed to demonstrate production constraints rather than toy CRUD flows.</p>
+      <p class="case-lede">An e-commerce storefront built around the data and checkout problems that simple store demos often skip.</p>
       <div class="case-grid">
-        <section><h3>Challenge</h3><p>Turn a real production project into a safe public demo without stripping away the decisions that make commerce software trustworthy.</p></section>
-        <section><h3>Integrity</h3><p>Checkout re-derives pricing server-side, validates current inventory, and keeps working when non-critical Supabase writes fail.</p></section>
-        <section><h3>Trust</h3><p>Verified Buyer status is tied to real orders, while analytics remain disabled until explicit consent.</p></section>
-        <section><h3>Delivery</h3><p>The app supports English and French, deploys to Vercel, and documents a Docker, Caddy, and GitHub Actions pipeline.</p></section>
+        <section><h3>Challenge</h3><p>Turn a real storefront codebase into a safe public demo without removing the decisions that make checkout trustworthy.</p></section>
+        <section><h3>Checkout</h3><p>The server recalculates prices and checks stock before accepting an order. Non-essential database writes can fail without taking checkout down.</p></section>
+        <section><h3>Customer trust</h3><p>A review is marked “Verified Buyer” only when it matches an order, and analytics stay off until the visitor consents.</p></section>
+        <section><h3>Delivery</h3><p>The bilingual app runs on Vercel, with a separate Docker-based deployment path documented in the repository.</p></section>
       </div>
     </article>
   </template>
@@ -339,16 +333,16 @@
     <article class="case-content">
       <p class="case-label">Systematic investing · Research and core platform complete</p>
       <h2 id="case-title">Sillage</h2>
-      <p class="case-lede">One event-driven engine for historical simulation and live trading, designed to make unrealistic execution difficult by construction.</p>
+      <p class="case-lede">One decision engine for historical simulation and live trading, designed to prevent unrealistic backtest results.</p>
       <div class="case-grid">
-        <section><h3>Execution integrity</h3><p>Backtests and live trading call the same loop. Close-time decisions execute no earlier than the next open, and every market-data read requires an explicit <code>as_of</code> timestamp.</p></section>
-        <section><h3>Operational safety</h3><p>Exact decimal accounting, pre-submission journaling, idempotency identifiers, stale-data checks, position reconciliation, and risk limits protect the live path.</p></section>
-        <section><h3>Validation</h3><p>Research covers held-out periods, parameter sensitivity, timing luck, transaction-cost stress, and failed experiments—including a crypto result rejected after tracing hindsight in asset admission.</p></section>
+        <section><h3>Honest timing</h3><p>Backtests and live trading follow the same steps. A decision made at the close cannot trade until the next open, and data queries cannot read beyond their stated time.</p></section>
+        <section><h3>Order safety</h3><p>Orders are saved before submission and given a unique retry-safe ID. Trading stops on stale data, broker position differences, or broken risk limits.</p></section>
+        <section><h3>Validation</h3><p>Tests cover unseen time periods, parameter changes, trading-day timing, and higher costs. One promising crypto result was rejected after finding that it benefited from hindsight.</p></section>
         <section><h3>Current results</h3><p>The primary strategy reached a 0.82 Sharpe and 21.8% maximum drawdown from 2005–2026. A 50/50 blend with 60/40 improved Sharpe to 0.91 and reduced drawdown to 19.9%.</p></section>
       </div>
       <div class="case-next">
         <h3>What remains</h3>
-        <p>Verify the adapter against IB Gateway and paper trading, model cash and margin financing, freeze complementary strategy sleeves against predefined criteria, and publish a seeded dashboard demo and tearsheet.</p>
+        <p>Verify the broker connection through IB Gateway and paper trading, improve cash and margin cost modelling, select the final strategy mix using predefined criteria, and publish a seeded dashboard demo and results report.</p>
       </div>
     </article>
   </template>
@@ -359,10 +353,10 @@
       <h2 id="case-title">Finance Dashboard</h2>
       <p class="case-lede">A full-stack personal-finance tracker taken from mobile UI through hosted API and database.</p>
       <div class="case-grid">
-        <section><h3>Product</h3><p>Income and expense categorisation feeds monthly charts, transaction views, and a clear net-balance summary.</p></section>
-        <section><h3>Stack</h3><p>React Native talks to a Node and Express REST API backed by PostgreSQL on Neon.</p></section>
+        <section><h3>Product</h3><p>Income and expense categories feed monthly charts, transaction views, and a clear net-balance summary.</p></section>
+        <section><h3>Stack</h3><p>The React Native app connects to a Node API and a hosted PostgreSQL database.</p></section>
         <section><h3>Ownership</h3><p>Built solo across interface design, data modelling, API development, hosting, and mobile releases.</p></section>
-        <section><h3>Delivery</h3><p>Render hosts the API, while Expo EAS enables over-the-air application updates without reinstallation.</p></section>
+        <section><h3>Delivery</h3><p>The API is hosted on Render, while Expo supports mobile updates without requiring reinstallation.</p></section>
       </div>
     </article>
   </template>
@@ -373,8 +367,8 @@
       <h2 id="case-title">Tides of the Horde</h2>
       <p class="case-lede">A Unity arena-survival game combining gameplay systems, tools, interface work, and custom visuals.</p>
       <div class="case-grid">
-        <section><h3>Systems</h3><p>Created JSON-configurable enemy waves, dynamic boss attacks, and a modular spell-casting system.</p></section>
-        <section><h3>Architecture</h3><p>Applied MVC boundaries to keep game state, presentation, and control logic easier to extend.</p></section>
+        <section><h3>Systems</h3><p>Created configurable enemy waves, changing boss attack patterns, and a reusable spell system.</p></section>
+        <section><h3>Architecture</h3><p>Separated game state, presentation, and controls so gameplay features were easier to extend.</p></section>
         <section><h3>Interaction</h3><p>Worked across AI behaviour, physics-based combat, UI/UX, and a data-driven upgrade tree.</p></section>
         <section><h3>Visuals</h3><p>Created supporting 3D assets in Blender and custom effects using HLSL and ShaderLab.</p></section>
       </div>
