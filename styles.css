@@ -375,6 +375,22 @@ body::before {
   border-left-color: rgba(124, 111, 224, 0.55);
 }
 
+.sillage-dashboard {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.sillage-dashboard .carousel--wide {
+  aspect-ratio: 1910 / 823;
+  border: 1px solid var(--border);
+}
+
+.carousel--single .carousel-prev,
+.carousel--single .carousel-next,
+.carousel--single .carousel-dots {
+  display: none;
+}
+
 .sillage-visual {
   position: relative;
   display: grid;
