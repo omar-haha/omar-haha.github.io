@@ -496,6 +496,10 @@ body::before {
   object-position: center;
 }
 
+.carousel--wide .carousel-track img.rcca-hero-shot {
+  object-position: top center;
+}
+
 /* ── Video card ───────────────────────────────────── */
 
 .card--video {

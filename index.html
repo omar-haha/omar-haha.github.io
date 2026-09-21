@@ -51,11 +51,13 @@
               Co-developed a mental wellness mobile app with an 11-person team across a full academic release
               cycle. Built the app's main navigation, connected mobile screens to the backend, and led the move
               from Oracle to PostgreSQL. Also wrote automated tests and helped maintain the checks used to catch
-              problems before deployment.
+              problems before deployment. The app is now available on the Apple App Store, backed by an API
+              deployed on Render.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="memantra">Case study</button>
               <a class="btn-link" href="https://github.com/MeMantraa/MeMantra" target="_blank" rel="noopener">GitHub &nearr;</a>
+              <a class="btn-link" href="https://apps.apple.com/us/app/memantra/id6761772637" target="_blank" rel="noopener">App Store &nearr;</a>
             </div>
           </div>
           <div class="card-media">
@@ -79,34 +81,34 @@
         <div class="card card--wide">
           <div class="card-content">
             <div class="card-header">
-              <h3>Vessel <span class="badge">Demo</span></h3>
+              <h3>RCCA <span class="badge">Client work</span></h3>
             </div>
             <div class="chips">
-              <span class="chip">Next.js 15</span>
-              <span class="chip">React 19</span>
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
               <span class="chip">TypeScript</span>
               <span class="chip">Tailwind CSS</span>
               <span class="chip">Supabase</span>
               <span class="chip">Docker</span>
             </div>
             <p>
-              Full-stack e-commerce storefront adapted into a public portfolio demo. Checkout recalculates
-              prices and checks current stock on the server instead of trusting the browser, and optional data
-              failures do not prevent an order from completing. The app also includes a bilingual interface,
-              order-backed &ldquo;Verified Buyer&rdquo; reviews, consent-based analytics, and a documented deployment setup.
+              Designed and built a bilingual storefront for a Canadian client, including the responsive catalog,
+              product pages, customer accounts, checkout, and order flows. The production app checks price and
+              stock on the server, links verified reviews to real orders, and includes documented database,
+              backup, and rollback procedures.
             </p>
             <div class="card-actions">
-              <button class="btn-link case-study-trigger" data-case-study="vessel">Case study</button>
-              <a class="btn-link" href="https://github.com/omar-haha/rcca" target="_blank" rel="noopener">GitHub &nearr;</a>
+              <button class="btn-link case-study-trigger" data-case-study="rcca">Case study</button>
+              <a class="btn-link" href="https://researchchemicals.ca" target="_blank" rel="noopener">Live site &nearr;</a>
             </div>
           </div>
           <div class="card-media card-media--wide">
             <div class="carousel carousel--wide">
               <div class="carousel-track">
-                <img src="images/rcca/1.png" alt="Vessel — product catalog with category filters" loading="lazy">
-                <img src="images/rcca/2.png" alt="Vessel — customer reviews page" loading="lazy">
-                <img src="images/rcca/3.png" alt="Vessel — FAQ page" loading="lazy">
-                <img src="images/rcca/4.png" alt="Vessel — contact page" loading="lazy">
+                <img class="rcca-hero-shot" src="images/rcca/pure-precision.png" alt="RCCA — Pure Precision storefront landing page" loading="lazy">
+                <img src="images/rcca/store.png" alt="RCCA — searchable product catalog with category filters" loading="lazy">
+                <img src="images/rcca/bac-water.png" alt="RCCA — BAC Water product page" loading="lazy">
+                <img src="images/rcca/account.png" alt="RCCA — customer account and order history" loading="lazy">
               </div>
               <button class="carousel-prev" aria-label="Previous">&#8249;</button>
               <button class="carousel-next" aria-label="Next">&#8250;</button>
@@ -123,7 +125,7 @@
         <div class="card card--wide card--sillage">
           <div class="card-content">
             <div class="card-header">
-              <h3>Sillage <span class="badge">In development</span></h3>
+              <h3>Sillage <span class="badge">Paper trading</span></h3>
             </div>
             <div class="chips">
               <span class="chip">Python</span>
@@ -138,12 +140,13 @@
               Portfolio engine for backtesting and live trading across ETFs and crypto. Both modes use the same
               decision process, with strict time boundaries that prevent a strategy from seeing future data.
               Orders are recorded before submission, and trading stops when data is stale, positions disagree,
-              or a risk limit is exceeded. The core platform is complete; IBKR paper testing remains in progress.
+              or a risk limit is exceeded. Its Interactive Brokers adapter has completed a full paper-account
+              order lifecycle; no real money has been traded.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="sillage">Case study</button>
               <a class="btn-link" href="https://github.com/omar-haha/sillage" target="_blank" rel="noopener">GitHub &nearr;</a>
-              <span class="project-state">Core platform complete</span>
+              <span class="project-state">IBKR paper lifecycle verified</span>
             </div>
           </div>
           <div class="card-media card-media--wide sillage-dashboard">
@@ -309,22 +312,22 @@
       <div class="case-grid">
         <section><h3>Challenge</h3><p>Keep a mobile app dependable while 11 students worked on navigation, APIs, data, and features at the same time.</p></section>
         <section><h3>My role</h3><p>Built the main tab navigation, connected screens to backend endpoints, led the Oracle-to-PostgreSQL migration, and wrote app and API tests.</p></section>
-        <section><h3>Release safety</h3><p>Automated tests, linting, type checks, and security analysis ran on every push so issues were caught before deployment.</p></section>
+        <section><h3>Release safety</h3><p>Automated tests, linting, type checks, and security analysis ran on every push. The backend is deployed on Render and the app has shipped on the Apple App Store.</p></section>
         <section><h3>Takeaway</h3><p>Clear interfaces and automatic checks became essential once many people were changing the same product.</p></section>
       </div>
     </article>
   </template>
 
-  <template id="case-vessel">
+  <template id="case-rcca">
     <article class="case-content">
-      <p class="case-label">Full-stack portfolio demo</p>
-      <h2 id="case-title">Vessel</h2>
-      <p class="case-lede">An e-commerce storefront built around the data and checkout problems that simple store demos often skip.</p>
+      <p class="case-label">Client storefront · Bilingual e-commerce</p>
+      <h2 id="case-title">RCCA</h2>
+      <p class="case-lede">A responsive production storefront built for a Canadian research-compounds retailer.</p>
       <div class="case-grid">
-        <section><h3>Challenge</h3><p>Turn a real storefront codebase into a safe public demo without removing the decisions that make checkout trustworthy.</p></section>
+        <section><h3>Challenge</h3><p>Turn a specialized catalog into a polished English and French shopping flow that remains clear across desktop and mobile.</p></section>
         <section><h3>Checkout</h3><p>The server recalculates prices and checks stock before accepting an order. Non-essential database writes can fail without taking checkout down.</p></section>
         <section><h3>Customer trust</h3><p>A review is marked “Verified Buyer” only when it matches an order, and analytics stay off until the visitor consents.</p></section>
-        <section><h3>Delivery</h3><p>The bilingual app runs on Vercel, with a separate Docker-based deployment path documented in the repository.</p></section>
+        <section><h3>Delivery</h3><p>The production setup includes Docker and Caddy, database migrations, automated deployment, plus documented backup and rollback procedures.</p></section>
       </div>
     </article>
   </template>
@@ -342,7 +345,7 @@
       </div>
       <div class="case-next">
         <h3>What remains</h3>
-        <p>Verify the broker connection through IB Gateway and paper trading, improve cash and margin cost modelling, select the final strategy mix using predefined criteria, and publish a seeded dashboard demo and results report.</p>
+        <p>Continue unattended paper operation, compare modelled and broker fills, improve cash and margin cost modelling, and select the final strategy mix using predefined criteria before changing portfolio risk.</p>
       </div>
     </article>
   </template>
