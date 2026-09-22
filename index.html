@@ -33,6 +33,69 @@
       <h2>Projects</h2>
       <div class="cards">
 
+        <div class="card card--wide card--sillage">
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Sillage <span class="badge">Paper trading</span></h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">DuckDB</span>
+              <span class="chip">Interactive Brokers</span>
+              <span class="chip">Docker</span>
+            </div>
+            <p>
+              Portfolio engine for backtesting and live trading across ETFs and crypto. Both modes use the same
+              decision process, with strict time boundaries that prevent a strategy from seeing future data.
+              Orders are recorded before submission, and trading stops when data is stale, positions disagree,
+              or a risk limit is exceeded. Its Interactive Brokers adapter has completed a full paper-account
+              order lifecycle; no real money has been traded.
+            </p>
+            <div class="card-actions">
+              <button class="btn-link case-study-trigger" data-case-study="sillage">Case study</button>
+              <a class="btn-link" href="https://github.com/omar-haha/sillage" target="_blank" rel="noopener">GitHub &nearr;</a>
+              <span class="project-state">IBKR paper lifecycle verified</span>
+            </div>
+          </div>
+          <div class="card-media card-media--wide sillage-dashboard">
+            <div class="carousel carousel--wide">
+              <div class="carousel-track">
+                <img src="images/sillage/1.png" alt="Sillage dashboard overview" loading="lazy">
+                <img src="images/sillage/2.png" alt="Sillage portfolio performance charts" loading="lazy">
+                <img src="images/sillage/3.png" alt="Sillage portfolio allocation view" loading="lazy">
+                <img src="images/sillage/4.png" alt="Sillage risk and return statistics" loading="lazy">
+                <img src="images/sillage/5.png" alt="Sillage trading journal" loading="lazy">
+              </div>
+              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots">
+                <button class="dot active" aria-label="Slide 1"></button>
+                <button class="dot" aria-label="Slide 2"></button>
+                <button class="dot" aria-label="Slide 3"></button>
+                <button class="dot" aria-label="Slide 4"></button>
+                <button class="dot" aria-label="Slide 5"></button>
+              </div>
+            </div>
+          </div>
+          <div class="sillage-visual" aria-label="Sillage execution sequence: market close, decision, durable journal, risk gate, next-open execution">
+            <div class="flow-step"><span>01</span><strong>Market close</strong><small>as_of data boundary</small></div>
+            <div class="flow-line" aria-hidden="true"></div>
+            <div class="flow-step"><span>02</span><strong>Decision</strong><small>shared event loop</small></div>
+            <div class="flow-line" aria-hidden="true"></div>
+            <div class="flow-step"><span>03</span><strong>Journal + risk</strong><small>durable, idempotent</small></div>
+            <div class="flow-line" aria-hidden="true"></div>
+            <div class="flow-step flow-step--accent"><span>04</span><strong>Next open</strong><small>eligible execution</small></div>
+            <div class="sillage-metrics">
+              <div><strong>0.91</strong><span>blended Sharpe</span></div>
+              <div><strong>19.9%</strong><span>max drawdown</span></div>
+              <div><strong>2005–26</strong><span>test period</span></div>
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <div class="card-content">
             <div class="card-header">
@@ -105,10 +168,10 @@
           <div class="card-media card-media--wide">
             <div class="carousel carousel--wide">
               <div class="carousel-track">
-                <img class="rcca-hero-shot" src="images/rcca/pure-precision.png" alt="RCCA — Pure Precision storefront landing page" loading="lazy">
-                <img src="images/rcca/store.png" alt="RCCA — searchable product catalog with category filters" loading="lazy">
-                <img src="images/rcca/bac-water.png" alt="RCCA — BAC Water product page" loading="lazy">
-                <img src="images/rcca/account.png" alt="RCCA — customer account and order history" loading="lazy">
+                <img class="rcca-hero-shot" src="images/rcca/1.png" alt="RCCA — Pure Precision storefront landing page" loading="lazy">
+                <img src="images/rcca/2.png" alt="RCCA — searchable product catalog with category filters" loading="lazy">
+                <img src="images/rcca/3.png" alt="RCCA — BAC Water product page" loading="lazy">
+                <img src="images/rcca/4.png" alt="RCCA — customer account and order history" loading="lazy">
               </div>
               <button class="carousel-prev" aria-label="Previous">&#8249;</button>
               <button class="carousel-next" aria-label="Next">&#8250;</button>
@@ -118,59 +181,6 @@
                 <button class="dot" aria-label="Slide 3"></button>
                 <button class="dot" aria-label="Slide 4"></button>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card card--wide card--sillage">
-          <div class="card-content">
-            <div class="card-header">
-              <h3>Sillage <span class="badge">Paper trading</span></h3>
-            </div>
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">FastAPI</span>
-              <span class="chip">React</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">DuckDB</span>
-              <span class="chip">Interactive Brokers</span>
-              <span class="chip">Docker</span>
-            </div>
-            <p>
-              Portfolio engine for backtesting and live trading across ETFs and crypto. Both modes use the same
-              decision process, with strict time boundaries that prevent a strategy from seeing future data.
-              Orders are recorded before submission, and trading stops when data is stale, positions disagree,
-              or a risk limit is exceeded. Its Interactive Brokers adapter has completed a full paper-account
-              order lifecycle; no real money has been traded.
-            </p>
-            <div class="card-actions">
-              <button class="btn-link case-study-trigger" data-case-study="sillage">Case study</button>
-              <a class="btn-link" href="https://github.com/omar-haha/sillage" target="_blank" rel="noopener">GitHub &nearr;</a>
-              <span class="project-state">IBKR paper lifecycle verified</span>
-            </div>
-          </div>
-          <div class="card-media card-media--wide sillage-dashboard">
-            <div class="carousel carousel--wide carousel--single">
-              <div class="carousel-track">
-                <img src="images/sillage/dashboard-overview.png" alt="Sillage dashboard showing portfolio metrics and value over time" loading="lazy">
-              </div>
-              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-              <button class="carousel-next" aria-label="Next">&#8250;</button>
-              <div class="carousel-dots"><button class="dot active" aria-label="Slide 1"></button></div>
-            </div>
-          </div>
-          <div class="sillage-visual" aria-label="Sillage execution sequence: market close, decision, durable journal, risk gate, next-open execution">
-            <div class="flow-step"><span>01</span><strong>Market close</strong><small>as_of data boundary</small></div>
-            <div class="flow-line" aria-hidden="true"></div>
-            <div class="flow-step"><span>02</span><strong>Decision</strong><small>shared event loop</small></div>
-            <div class="flow-line" aria-hidden="true"></div>
-            <div class="flow-step"><span>03</span><strong>Journal + risk</strong><small>durable, idempotent</small></div>
-            <div class="flow-line" aria-hidden="true"></div>
-            <div class="flow-step flow-step--accent"><span>04</span><strong>Next open</strong><small>eligible execution</small></div>
-            <div class="sillage-metrics">
-              <div><strong>0.91</strong><span>blended Sharpe</span></div>
-              <div><strong>19.9%</strong><span>max drawdown</span></div>
-              <div><strong>2005–26</strong><span>test period</span></div>
             </div>
           </div>
         </div>
