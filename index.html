@@ -130,6 +130,54 @@
         <div class="card card--wide">
           <div class="card-content">
             <div class="card-header">
+              <h3>Pizza Roma <span class="badge">Client project</span></h3>
+            </div>
+            <div class="chips">
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Drizzle ORM</span>
+              <span class="chip">Docker</span>
+            </div>
+            <p>
+              Designed and built a bilingual website and direct-ordering platform for an independent Montréal
+              restaurant. It turns real menu and preparation rules into a responsive menu, configurable cart,
+              and restaurant order workflow. Prices are recalculated on the server and order details are saved
+              as durable snapshots. The public site is live; checkout remains closed while payment and restaurant
+              integrations are completed.
+            </p>
+            <div class="card-actions">
+              <button class="btn-link case-study-trigger" data-case-study="pizza-roma">Case study</button>
+              <a class="btn-link" href="https://github.com/omar-haha/pizza-roma" target="_blank" rel="noopener">GitHub &nearr;</a>
+              <a class="btn-link" href="https://pizzaromamtl.ca" target="_blank" rel="noopener">Live site &nearr;</a>
+            </div>
+          </div>
+          <div class="card-media card-media--wide">
+            <div class="carousel carousel--wide">
+              <div class="carousel-track">
+                <img src="images/pizza-roma/1.png" alt="Pizza Roma bilingual restaurant homepage" loading="lazy">
+                <img src="images/pizza-roma/2.png" alt="Pizza Roma responsive menu" loading="lazy">
+                <img src="images/pizza-roma/3.png" alt="Pizza Roma configurable pizza ordering flow" loading="lazy">
+                <img src="images/pizza-roma/4.png" alt="Pizza Roma cart and checkout interface" loading="lazy">
+                <img src="images/pizza-roma/5.png" alt="Pizza Roma customer and restaurant order workflow" loading="lazy">
+              </div>
+              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-next" aria-label="Next">&#8250;</button>
+              <div class="carousel-dots">
+                <button class="dot active" aria-label="Slide 1"></button>
+                <button class="dot" aria-label="Slide 2"></button>
+                <button class="dot" aria-label="Slide 3"></button>
+                <button class="dot" aria-label="Slide 4"></button>
+                <button class="dot" aria-label="Slide 5"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--wide">
+          <div class="card-content">
+            <div class="card-header">
               <h3>RCCA <span class="badge">Client work</span></h3>
             </div>
             <div class="chips">
@@ -310,6 +358,20 @@
         <section><h3>My role</h3><p>Built the main tab navigation, connected screens to backend endpoints, led the Oracle-to-PostgreSQL migration, and wrote app and API tests.</p></section>
         <section><h3>Release safety</h3><p>Automated tests, linting, type checks, and security analysis ran on every push. The backend is deployed on Render and the app has shipped on the Apple App Store.</p></section>
         <section><h3>Takeaway</h3><p>Clear interfaces and automatic checks became essential once many people were changing the same product.</p></section>
+      </div>
+    </article>
+  </template>
+
+  <template id="case-pizza-roma">
+    <article class="case-content">
+      <p class="case-label">Independent restaurant · Bilingual ordering platform</p>
+      <h2 id="case-title">Pizza Roma</h2>
+      <p class="case-lede">A direct ordering experience shaped around a Montréal restaurant's real menu, preparation rules, and day-to-day workflow.</p>
+      <div class="case-grid">
+        <section><h3>Problem</h3><p>Phone orders interrupt staff and make detailed pizza and combo choices difficult to confirm. The site gives customers a visual way to configure and review an order.</p></section>
+        <section><h3>Product work</h3><p>Turned menu boards, POS references, owner interviews, and restaurant photography into responsive French and English customer flows.</p></section>
+        <section><h3>Order integrity</h3><p>The server recalculates prices in integer cents, prevents duplicate retries, and preserves the exact menu, tax, delivery, and configuration details used for each order.</p></section>
+        <section><h3>Release boundary</h3><p>The public restaurant site is live, but ordering defaults to closed until payment, certified Québec sales recording, authentication, and restaurant intake are production-ready.</p></section>
       </div>
     </article>
   </template>
