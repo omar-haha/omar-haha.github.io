@@ -134,18 +134,18 @@
             </div>
             <div class="chips">
               <span class="chip">Next.js</span>
-              <span class="chip">React</span>
               <span class="chip">TypeScript</span>
               <span class="chip">PostgreSQL</span>
-              <span class="chip">Drizzle ORM</span>
+              <span class="chip">Helcim</span>
+              <span class="chip">Geoapify</span>
               <span class="chip">Docker</span>
             </div>
             <p>
-              Designed and built a bilingual website and direct-ordering platform for an independent Montréal
-              restaurant. It turns real menu and preparation rules into a responsive menu, configurable cart,
-              and restaurant order workflow. Prices are recalculated on the server and order details are saved
-              as durable snapshots. The public site is live; checkout remains closed while payment and restaurant
-              integrations are completed.
+              Built and deployed a bilingual ordering platform for an independent Montréal restaurant, with
+              guided menu configuration, verified addresses, server-authoritative pricing, and staff-controlled
+              order intake. Helcim payments are preauthorized at checkout and captured only after staff accepts
+              the order. The public site runs on OVHcloud; customer ordering remains gated pending the certified
+              Québec POS/SRS and operational rollout.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="pizza-roma">Case study</button>
@@ -160,7 +160,8 @@
                 <img src="images/pizza-roma/2.png" alt="Pizza Roma responsive menu" loading="lazy">
                 <img src="images/pizza-roma/3.png" alt="Pizza Roma configurable pizza ordering flow" loading="lazy">
                 <img src="images/pizza-roma/4.png" alt="Pizza Roma cart and checkout interface" loading="lazy">
-                <img src="images/pizza-roma/5.png" alt="Pizza Roma customer and restaurant order workflow" loading="lazy">
+                <img src="images/pizza-roma/5.png" alt="Pizza Roma customer order status" loading="lazy">
+                <img src="images/pizza-roma/6.png" alt="Pizza Roma restaurant staff order workflow" loading="lazy">
               </div>
               <button class="carousel-prev" aria-label="Previous">&#8249;</button>
               <button class="carousel-next" aria-label="Next">&#8250;</button>
@@ -170,6 +171,7 @@
                 <button class="dot" aria-label="Slide 3"></button>
                 <button class="dot" aria-label="Slide 4"></button>
                 <button class="dot" aria-label="Slide 5"></button>
+                <button class="dot" aria-label="Slide 6"></button>
               </div>
             </div>
           </div>
@@ -369,9 +371,9 @@
       <p class="case-lede">A direct ordering experience shaped around a Montréal restaurant's real menu, preparation rules, and day-to-day workflow.</p>
       <div class="case-grid">
         <section><h3>Problem</h3><p>Phone orders interrupt staff and make detailed pizza and combo choices difficult to confirm. The site gives customers a visual way to configure and review an order.</p></section>
-        <section><h3>Product work</h3><p>Turned menu boards, POS references, owner interviews, and restaurant photography into responsive French and English customer flows.</p></section>
-        <section><h3>Order integrity</h3><p>The server recalculates prices in integer cents, prevents duplicate retries, and preserves the exact menu, tax, delivery, and configuration details used for each order.</p></section>
-        <section><h3>Release boundary</h3><p>The public restaurant site is live, but ordering defaults to closed until payment, certified Québec sales recording, authentication, and restaurant intake are production-ready.</p></section>
+        <section><h3>Product work</h3><p>Turned menu boards, POS references, owner interviews, and restaurant media into responsive French and English configuration, cart, address, status, and staff flows.</p></section>
+        <section><h3>Payment safety</h3><p>Helcim hosts the payment fields. The server verifies its signed response and exact server-priced amount, stores the preauthorization, and captures it only after staff accepts the order.</p></section>
+        <section><h3>Production boundary</h3><p>The app runs on OVHcloud with Docker, Caddy, health checks, and managed PostgreSQL. Customer ordering remains gated until certified Québec POS/SRS and restaurant operations are ready.</p></section>
       </div>
     </article>
   </template>
