@@ -52,7 +52,8 @@
               decision process, with strict time boundaries that prevent a strategy from seeing future data.
               Orders are recorded before submission, and trading stops when data is stale, positions disagree,
               or a risk limit is exceeded. Its Interactive Brokers adapter has completed a full paper-account
-              order lifecycle; no real money has been traded.
+              order lifecycle; no real money has been traded. Failed paper runs produce redacted evidence for a
+              read-only diagnosis, while any recovery still requires owner approval.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="sillage">Case study</button>
@@ -404,6 +405,8 @@
         <section><h3>Current results</h3><p>The primary strategy reached a 0.82 Sharpe and 21.8% maximum drawdown from 2005–2026. A 50/50 blend with 60/40 improved Sharpe to 0.91 and reduced drawdown to 19.9%.</p></section>
       </div>
       <div class="case-next">
+        <h3>Operations</h3>
+        <p>Failures and missed cycles capture redacted evidence for a read-only OpenHands diagnosis. GitHub Actions validates and delivers the report; recovery is limited to allow-listed commands and requires owner approval. Daily S3 backups cover Sillage, RCCA, and Pizza Roma, with checksum checks and isolated restore drills for all three databases.</p>
         <h3>What remains</h3>
         <p>Continue unattended paper operation, compare modelled and broker fills, improve cash and margin cost modelling, and select the final strategy mix using predefined criteria before changing portfolio risk.</p>
       </div>
@@ -587,9 +590,9 @@
       },
       delivery: {
         kicker: 'Production path',
-        title: 'Repeatable releases',
-        description: 'Containerised and hosted applications supported by automated pipelines, managed infrastructure, and mobile OTA delivery.',
-        stack: ['Docker', 'GitHub Actions', 'Vercel', 'Expo EAS']
+        title: 'Deployments that can be recovered',
+        description: 'Containerised services, automated checks, and daily off-site database backups verified with checksum checks and isolated restore drills.',
+        stack: ['Docker', 'GitHub Actions', 'AWS S3', 'Caddy']
       }
     };
 
