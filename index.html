@@ -131,22 +131,22 @@
         <div class="card card--wide">
           <div class="card-content">
             <div class="card-header">
-              <h3>Pizza Roma <span class="badge">Client project</span></h3>
+              <h3>Pizza Roma <span class="badge">Live client project</span></h3>
             </div>
             <div class="chips">
               <span class="chip">Next.js</span>
               <span class="chip">TypeScript</span>
               <span class="chip">PostgreSQL</span>
               <span class="chip">Helcim</span>
-              <span class="chip">Geoapify</span>
+              <span class="chip">C# / .NET</span>
               <span class="chip">Docker</span>
             </div>
             <p>
-              Built and deployed a bilingual ordering platform for an independent Montréal restaurant, with
-              guided menu configuration, verified addresses, server-authoritative pricing, and staff-controlled
-              order intake. Helcim payments are preauthorized at checkout and captured only after staff accepts
-              the order. The public site runs on OVHcloud; customer ordering remains gated pending the certified
-              Québec POS/SRS and operational rollout.
+              Built and deployed a bilingual ordering platform for an independent Montréal restaurant,
+              handling real payments and 11 orders in its first week. Customers configure their meals and
+              pay through Helcim; staff accept orders through a dashboard or a C#/.NET Windows companion
+              with audible alerts and automatic preparation-ticket printing. Prices are checked on the server,
+              and payments are captured only after staff acceptance.
             </p>
             <div class="card-actions">
               <button class="btn-link case-study-trigger" data-case-study="pizza-roma">Case study</button>
@@ -369,12 +369,12 @@
     <article class="case-content">
       <p class="case-label">Independent restaurant · Bilingual ordering platform</p>
       <h2 id="case-title">Pizza Roma</h2>
-      <p class="case-lede">A direct ordering experience shaped around a Montréal restaurant's real menu, preparation rules, and day-to-day workflow.</p>
+      <p class="case-lede">A live bilingual ordering platform and Windows register companion for a Montréal restaurant, with real payments and 11 orders in its first week.</p>
       <div class="case-grid">
         <section><h3>Problem</h3><p>Phone orders interrupt staff and make detailed pizza and combo choices difficult to confirm. The site gives customers a visual way to configure and review an order.</p></section>
-        <section><h3>Product work</h3><p>Turned menu boards, POS references, owner interviews, and restaurant media into responsive French and English configuration, cart, address, status, and staff flows.</p></section>
-        <section><h3>Payment safety</h3><p>Helcim hosts the payment fields. The server verifies its signed response and exact server-priced amount, stores the preauthorization, and captures it only after staff accepts the order.</p></section>
-        <section><h3>Production boundary</h3><p>The app runs on OVHcloud with Docker, Caddy, health checks, and managed PostgreSQL. Customer ordering remains gated until certified Québec POS/SRS and restaurant operations are ready.</p></section>
+        <section><h3>Register workflow</h3><p>A C#/.NET Windows companion brings online orders to the existing register with repeating alerts, staff actions, preparation-ticket printing, and signed updates. Staff still enter orders into the POS manually.</p></section>
+        <section><h3>Payment safety</h3><p>Helcim hosts the card fields. The server verifies the signed response and amount, then captures payment after staff accepts. Durable payment records and retry keys support returns and reconciliation when a response is uncertain.</p></section>
+        <section><h3>Real-world constraints</h3><p>The Windows companion had to coexist with the fullscreen POS without interrupting staff input. Register testing exposed an elevation mismatch behind a shortcut failure. The app runs on OVHcloud with Docker, Caddy, and PostgreSQL; automatic POS entry and fiscal integration remain future work.</p></section>
       </div>
     </article>
   </template>
